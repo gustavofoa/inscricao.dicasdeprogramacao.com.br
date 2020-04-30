@@ -10,215 +10,6 @@ append css
 
 block content
 
-    //- * * * * * * * * * *
-    //- * * Page Header * *
-    //- * * * * * * * * * *
-
-    include mixins/header.pug
-    +header({
-        pageHeaderBg: 'bg-gradient-primary-to-secondary',
-        pageHeaderStyle: 'page-header-dark',
-        svgBorderAngled: false,
-        svgBorderRounded: false,
-        svgBorderWaves: true,
-        svgBorderFill: 'text-light'
-    })
-
-        .page-header-content.mb-n5
-            .container
-                .row.justify-content-center.align-items-center
-                    .col-lg-6(data-aos='fade-right')
-                        h1.page-header-title Inscrições GRATUITAS por tempo limitado!
-                        p.page-header-text.mb-5 Abrimos inscrições para a plataforma <strong>Minhas Músicas para Missa</strong> com acesso GRATUITO a área de cursos por 60 dias. <strong>APROVEITE</strong>!
-                        .row-lg.text-center(data-aos='fade-up', data-aos-delay='500')
-                            a.btn.btn-white.btn-xl.text-primary.rounded-pill(href='#signup-form') CLIQUE AQUI PARA SE CADASTRAR!
-                    .col-lg-6.z-1(data-aos='fade-left')
-                        .device-wrapper.mx-auto.mb-n15
-                            .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
-                                .screen
-                                    img(src='assets/img/inscricoes-gratuitas-minhas-mpm.png').img-fluid.z-1
-                    
-                    
-
-    //- * * * * * * * * * * * * * * *
-    //- * * Explicação quarentena * *
-    //- * * * * * * * * * * * * * * *
-
-    include mixins/section.pug
-    +section({
-        sectionBg: 'bg-white',
-        sectionPadding: 'py-10',
-        svgBorderAngled: true,
-        svgBorderRounded: false,
-        svgBorderWaves: false,
-        svgBorderFill: 'text-light'
-    })
-
-        .container
-            .row.justify-content-center
-                .col-lg-10.mt-5
-
-                    h1.display-3 Quarentena de estudos!
-
-                    p(style="text-align: justify;") Neste momento difícil que estamos passando em nosso país, sem poder ir à missa presencialmente, resolvemos liberar para você GRATUITAMENTE TODOS OS CURSOS que fazem parte da plataforma MINHAS MÚSICAS PARA MISSA por 60 dias!
-                    p(style="text-align: justify;") Isso mesmo, estamos liberando DE GRAÇA, os cursos que estão dentro da plataforma para você aproveitar este tempo quaresmal e quarentena em casa estudando sobre música e liturgia.
-
-
-    //- * * * * * * * * * * * * * * *
-    //- * * Quais são os cursos * * *
-    //- * * * * * * * * * * * * * * *
-
-    include mixins/section.pug
-    +section({
-        sectionBg: 'bg-light',
-        sectionPadding: 'py-10',
-        svgBorderAngled: false,
-        svgBorderRounded: true,
-        svgBorderWaves: false,
-        svgBorderFill: 'text-white'
-    })
-
-        .container
-            .row.justify-content-center
-                .col-lg-9
-                    .text-center
-                        h1.display-3 Liberamos 3 cursos <strong style="background: yellow; word-break: break-word;">GRATUITAMENTE</strong> para você!
-            .row
-                .col-lg-4.col-md-6.mb-5(data-aos='fade-up')
-                    a.card.text-center.text-decoration-none.h-100.lift(href='#!')
-                        .card-body.py-5
-                            img(src='https://minhas.musicasparamissa.com.br/cursos/liturgia-para-musicos/capa-curso-small.png', style="width: 80%;")
-                            h5(style="padding-top: 1rem;") Liturgia para Músicos
-                            p.card-text.small para você ver de uma forma mais aprofundada sobre esse assunto
-                .col-lg-4.col-md-6.mb-5(data-aos='fade-up', data-aos-delay='100')
-                    a.card.text-center.text-decoration-none.h-100.lift(href='#!')
-                        .card-body.py-5
-                            img(src='https://minhas.musicasparamissa.com.br/cursos/teoria-musical/capa-curso-small.png', style="width: 80%;")
-                            h5(style="padding-top: 1rem;") Teoria Musical
-                            p.card-text.small para você aprender o que é altura dos sons, figuras rítmicas, notas musicais, etc
-                .col-lg-4.col-md-6.mb-5(data-aos='fade-up', data-aos-delay='150')
-                    a.card.text-center.text-decoration-none.h-100.lift(href='#!')
-                        .card-body.py-5
-                            img(src='https://minhas.musicasparamissa.com.br/cursos/violao-iniciante/capa-curso-small.png', style="width: 80%;")
-                            h5(style="padding-top: 1rem;") Violão para iniciantes
-                            p.card-text.small para você que sempre quis aprender esse instrumento. Um curso com apostila para acompanhar o curso de forma fácil.
-                            
-
-    //- * * * * * * * * * * * * * * *
-    //- * * O que é a Plataforma  * *
-    //- * * * * * * * * * * * * * * *
-
-    include mixins/header.pug
-    +header({
-        pageHeaderBg: 'bg-white',
-        pageHeaderStyle: 'page-header-light',
-        svgBorderAngled: false,
-        svgBorderRounded: false,
-        svgBorderWaves: true,
-        svgBorderFill: 'text-light',
-    })
-
-        .page-header-content
-            .container
-                .row.justify-content-center
-                    .col-xl-8.col-lg-10.text-center(data-aos='fade')
-                        h1.display-4 Mas o que é a PLATAFORMA MINHAS MÚSICAS PARA MISSA?
-                        p Uma ferramenta completa com TUDO que precisa para prestar o melhor serviço musical na missa!
-
-
-    //- * * * * * * * * * * * *
-    //- * * Device Preview  * *
-    //- * * * * * * * * * * * *
-
-    include mixins/section.pug
-    +section({
-        sectionBg: 'bg-light',
-        sectionPadding: 'pb-10 pt-1',
-        svgBorderAngled: true,
-        svgBorderRounded: false,
-        svgBorderWaves: false,
-        svgBorderFill: 'text-white'
-    })
-
-        .container
-            .device-laptop.text-gray-200.mt-n10(data-aos='fade-up')
-                svg.device-container(xmlns='http://www.w3.org/2000/svg', fill='currentColor', viewBox='83.911 298.53 426.962 243.838')
-                    path(d='M474.843 516.208V309.886c0-6.418-4.938-11.355-11.354-11.355H131.791c-6.417 0-11.354 4.938-11.354 11.355v206.816H83.911v13.326c4.938 7.896 31.098 12.34 40.969 12.34h345.024c10.366 0 36.526-4.936 40.969-12.34v-13.326h-36.03v-.494zM134.26 313.341h326.762v203.361H134.26V313.341z')
-                img.device-screenshot(src='assets/img/imagem-repertorio-plataforma.png')
-
-    include mixins/section.pug
-    +section({
-        sectionBg: 'bg-white',
-        sectionPadding: 'pb-10 pt-1',
-        svgBorderAngled: false,
-        svgBorderRounded: false,
-        svgBorderWaves: true,
-        svgBorderFill: 'text-light'
-    })
-    
-        .page-header-content
-            .container
-                .row.justify-content-center
-                    .col-xl-8.col-lg-10.text-center(data-aos='fade')
-                        h1.display-4 Com a plataforma Minhas Músicas para Missa ...
-                        p(style="text-align: justify;") Você vai criar repertórios de uma maneira muito fácil e ágil e que podem facilmente ser enviados para todos do seu grupo de canto, pois assim, mesmo com a correria do dia-a-dia e as tarefas diárias que não cessam, a você e seu grupo podem por exemplo ouvir e ir aprendendo uma música nova enquanto lava a louça, ou faz qualquer outra atividade corriqueira.
-                        p(style="text-align: justify;") Veja no video como é fácil criar o seu repertório e usar a sua pasta de músicas.
-                .row.justify-content-center.z-1
-                    .col-lg-8(data-aos='fade-up')
-                        .card.lift.mb-n15
-                            .card-body.p-2
-                                .video.overlay.bg-img-cover.rounded(style='background-image: url("assets/img/login-plataforma.png")')
-                                    a.video-link(href='assets/video/repertorio-minhas-musicas.mp4', data-lity='')
-                                        i.fas.fa-play
-
-
-
-
-
-
-
-    include mixins/section.pug
-    +section({
-        sectionBg: 'bg-light',
-        sectionPadding: 'py-10',
-        svgBorderAngled: false,
-        svgBorderRounded: false,
-        svgBorderWaves: true,
-        svgBorderFill: 'text-primary'
-    })
-
-        .container
-            .row.align-items-center.justify-content-center
-                            
-                .col-md-9.col-lg-6(data-aos='slide-right')
-                    .mb-4
-                        .content-skewed.content-skewed-right
-                            img.img-fluid.content-skewed-item.shadow-lg.rounded-lg(src='assets/img/mp3-playback-salmos.png')
-
-                .col-lg-6
-                    .mb-5
-                        h2 Mas não é só isso!
-                        p.lead
-                            | Além da área de cursos (que ficará disponível por 60 dias gratuitamente) e criação de repertórios você também terá acesso à ...
-                    .row
-                        .col-md-6.mb-4
-                            h6 Sua própria pasta de músicas
-                            p.mb-2.small Você terá a sua própria pasta virtual de músicas personalizada na núvem!
-                        .col-md-6.mb-4
-                            h6 Download de MP3 e Playback
-                            p.mb-2.small.mb-0 Você poderá baixar os MP3 de salmos e músicas de composição da nossa equipe.
-                    .row
-                        .col-md-6.mb-4
-                            h6 Tira dúvidas
-                            p.mb-2.small.mb-0 Tirar as suas dúvidas sobre música litúrgica com a gente.
-                        .col-md-6.mb-4
-                            h6 E-books e catálogo de músicas
-                            p.small.mb-0 Baixar os nossos e-books especiais sobre música e liturgia
-
-
-
-
-
 
 
     include mixins/header.pug
@@ -226,42 +17,67 @@ block content
         pageHeaderBg: 'bg-img-repeat bg-primary',
         pageHeaderBgImg: 'background-image: url("assets/img/pattern-shapes.png")',
         pageHeaderStyle: 'page-header-dark',
-        svgBorderAngled: false,
+        svgBorderAngled: true,
         svgBorderRounded: false,
-        svgBorderWaves: true,
-        svgBorderFill: 'text-dark'
+        svgBorderWaves: false,
+        svgBorderFill: 'text-light'
     })
 
         .page-header-content(id="signup-form")
             .container
                 .row.align-items-center
                     .col-lg-6
-                        h1.page-header-title Garanta a sua vaga agora mesmo!
-                        p.page-header-text Liberamos os cursos da plataforma GRATUITAMENTA por 60 dias para você estudar durante esta quarentena. Esta é a forma que encontramos de colaborar ainda mais com você.
-                        p.page-header-text Se você quiser adquirir acesso PRÊMIUM à todas as funcionalidade da plataforma, você verá mais detalhes após fazer o seu login.
+                        .badge.badge-marketing.badge-pill.badge-secondary-soft.text-secondary.mb-3 14/05/2020 19:00
+                        h1.page-header-title Masterclass Rota do Programador
+                        p.page-header-text Inscreva-se GRATUITAMENTE para a Masterclass que vai revelar o caminho para você se tornar um programador profissional em menos de 6 meses.
+                        p.page-header-text A Masterclass vai acontecer dia 14/05/2020 às 19:00. Para participar basta se inscrever.
                     .col-lg-6(data-aos='slide-left')
                         .card.rounded-lg.text-dark
                             .card-header.py-4
-                                | Cadastre-se GRATUITAMENTE para ter acesso aos cursos!
+                                | Inscreva-se GRATUITAMENTE na Masterclass!
                             .card-body
-                                form(method="POST" action="https://g1k8r5gt46.execute-api.us-east-1.amazonaws.com/prod/users/free")
-                                    .form-group
-                                        label.small.text-gray-600(for='leadCapName') Nome Completo
-                                        input#leadCapName.form-control.rounded-pill(type='text' name='name' required)
+                                form(method="POST" action="http://mautic.dicasdeprogramacao.com.br/form/submit?formId=3")
                                     .form-group
                                         label.small.text-gray-600(for='leadCapEmail') E-mail
-                                        input#leadCapEmail.form-control.rounded-pill(type='email' name='email' required)
-                                    .form-row
-                                        .form-group.col-md-6
-                                            label.small.text-gray-600(for='leadCapPassword') Senha
-                                            input#leadCapPassword.form-control.rounded-pill(type='password' name='password' required)
-                                        .form-group.col-md-6
-                                            label.small.text-gray-600(for='leadCapConfirmPassword') Confirmação da Senha
-                                            input#leadCapConfirmPassword.form-control.rounded-pill(type='password' required)
+                                        input#leadCapEmail.form-control.rounded-pill(type='email' name='mauticform[email]' required)
                                     .form-group
                                         input(type="hidden" id="g-recaptcha-response" name="g-recaptcha-response")
                                         input(type="hidden" name="action" value="validate_captcha")
-                                    button.btn.btn-primary.btn-marketing.btn-block.rounded-pill.mt-4(type='submit') Solicitar Cadastro
+
+                                        input(type="hidden" name="mauticform[formId]" id="mauticform_01lssignin_id" value="3")
+                                        input(type="hidden" name="mauticform[return]" id="mauticform_01lssignin_return" value="")
+                                        input(type="hidden" name="mauticform[formName]" id="mauticform_01lssignin_name" value="01lssignin")
+
+
+                                    button.btn.btn-primary.btn-marketing.btn-block.rounded-pill.mt-4(type='submit') Assistir Gratuitamente
+
+
+
+
+
+
+
+
+    include mixins/header.pug
+    +header({
+        pageHeaderBg: 'bg-light',
+        pageHeaderStyle: 'page-header-light',
+        svgBorderAngled: false,
+        svgBorderRounded: false,
+        svgBorderWaves: true,
+        svgBorderFill: 'text-dark'
+    })
+
+        .page-header-content
+            .container
+                .row.justify-content-center
+                    .col-xl-8.col-lg-10.text-center
+                        h1.page-header-title Conheça o instrutor!
+                        img.avatar-lp(src='/assets/img/foto-gustavo.jpg')
+                        p.page-header-text.mb-5 <strong>Gustavo Furtado</strong> é Mestre em Computação Aplicada, Engenheiro da Computação, criador do blog { Dicas de Programação } por onde já passaram mais de 3 milhões de pessoas, em sua maioria iniciantes em programação.
+                        p.page-header-text.mb-5 Tem mais de 15 anos de experiência como desenvolvedor de softwares, tendo trabalhado com diversas linguagens de programação, frameworks, tecnicas e metodologia.
+                        
+
 
 
 
@@ -283,25 +99,38 @@ append scripts
             duration: 600,
             once: true
         });
-    script(src="https://www.google.com/recaptcha/api.js?render=6LemqOUUAAAAADhIyNdk8F0iLFY9Jb-ykx7J5n2c")
+    //<!-- Facebook Pixel Code -->
     script.
-        grecaptcha.ready(function() {
-            grecaptcha.execute('6LemqOUUAAAAADhIyNdk8F0iLFY9Jb-ykx7J5n2c', {action: 'validate_captcha'}).then(function(token) {
-                var recaptchaResponse = document.getElementById('g-recaptcha-response');
-                recaptchaResponse.value = token;
-            });
-        });
-
-        var password = document.getElementById("leadCapPassword");
-        var confirm_password = document.getElementById("leadCapConfirmPassword");
-
-        function validatePassword(){
-            if(password.value != confirm_password.value) {
-                confirm_password.setCustomValidity("As senhas não são iguais");
-            } else {
-                confirm_password.setCustomValidity('');
-            }
-        }
-
-        password.onchange = validatePassword;
-        confirm_password.onkeyup = validatePassword;
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '553205085377073');
+        fbq('track', 'PageView');
+    noscript
+        img(height="1", width="1", style="display:none", src="https://www.facebook.com/tr?id=553205085377073&ev=PageView&noscript=1")
+    //<!-- Facebook Pixel Code -->
+    script.
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '553205085377073');
+        fbq('track', 'PageView');
+    noscript
+        img(height="1", width="1", style="display:none", src="https://www.facebook.com/tr?id=553205085377073&ev=PageView&noscript=1")
+    //<!--Mautic-->
+    script.
+        (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+            w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+            m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//mautic.dicasdeprogramacao.com.br/mtc.js','mt');
+        mt('send', 'pageview');
