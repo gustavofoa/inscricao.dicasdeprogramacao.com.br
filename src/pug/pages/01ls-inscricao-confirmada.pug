@@ -34,7 +34,7 @@ block content
                 .row.justify-content-center
                     .col-xl-8.col-lg-10.text-center(data-aos='fade')
                         h1.page-header-title Que bom ter você conosco!
-                        p.page-header-text.mb-5 Agora que a sua inscrição para a <strong>Master Rota do Programador</strong> foi confirmada, reserve na sua agenda o <strong>14/05/2020 às 19 horas</strong>.
+                        p.page-header-text.mb-5 Agora que a sua inscrição para a <strong>Masterclass Rota do Programador</strong> foi confirmada, reserve na sua agenda o <strong>14/05/2020 às 19 horas</strong>.
                         p.page-header-text.mb-5 <strong>Você receberá um e-mail no dia 14/05/2020 com o link da Masterclass.</strong>
                         
                 
@@ -56,4 +56,17 @@ append scripts
             duration: 600,
             once: true
         });
-    
+    //<!-- Facebook Pixel Code -->
+    script.
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '553205085377073');
+        fbq('track', 'PageView');
+    noscript
+        img(height="1", width="1", style="display:none", src="https://www.facebook.com/tr?id=553205085377073&ev=PageView&noscript=1")
