@@ -1,0 +1,22 @@
+lang: node_js
+node_js:
+  - 10
+  - node
+before_script:
+  - npm install
+script:
+  - npm run build
+deploy:
+  provider: s3
+  local_dir: dist
+  access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
+  secret_access_key: $AWS_SECRET_KEY
+  bucket: "inscricao.dicasdeproramacao.com.br"
+  region: sa-east-1
+  skip_cleanup: true
+  acl: public_read
+  cache_control: "max-age=31536000"
+  expires: "2099-12-31 00:00:00 -0000"
+notifications:
+  email:
+    on_failure: always

@@ -2,7 +2,7 @@ extends ../layouts/default.pug
 
 block config
 
-    - var pageTitle = 'Plataforma Minhas Músicas para Missa'
+    - var pageTitle = 'Masterclass Rota do Programador'
 
 append css
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.css')
@@ -21,8 +21,8 @@ block content
 
     include mixins/header.pug
     +header({
-        pageHeaderBg: 'bg-gradient-primary-to-secondary',
-        pageHeaderStyle: 'page-header-dark',
+        pageHeaderBg: 'bg-light',
+        pageHeaderStyle: 'page-header-light',
         svgBorderAngled: false,
         svgBorderRounded: false,
         svgBorderWaves: true,
@@ -33,10 +33,9 @@ block content
             .container
                 .row.justify-content-center
                     .col-xl-8.col-lg-10.text-center(data-aos='fade')
-                        h1.page-header-title O correu algum erro ao cadastrar o seu acesso à plataforma
-                        p.page-header-text.mb-5 Tente novamente mais tarde. Caso não consiga, entre em contato conosco no e-mail: <strong>contato@musicasparamissa.com.br</strong>
-                        .row-lg.text-center(data-aos='fade-up', data-aos-delay='500')
-                            a.btn.btn-white.btn-xl.text-primary.rounded-pill(href='https://minhas.musicasparamissa.com.br/inscricao-gratuita') VOLTAR
+                        h1.page-header-title Que bom ter você conosco!
+                        p.page-header-text.mb-5 Agora que a sua inscrição para a <strong>Master Rota do Programador</strong> foi confirmada, reserve na sua agenda o <strong>14/05/2020 às 19 horas</strong>.
+                        p.page-header-text.mb-5 <strong>Você receberá um e-mail no dia 14/05/2020 com o link da Masterclass.</strong>
                         
                 
 
