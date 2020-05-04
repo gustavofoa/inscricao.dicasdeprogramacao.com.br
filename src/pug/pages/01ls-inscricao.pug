@@ -35,20 +35,17 @@ block content
                             .card-header.py-4
                                 | Inscreva-se GRATUITAMENTE na Masterclass!
                             .card-body
-                                form(method="POST" action="http://mautic.dicasdeprogramacao.com.br/form/submit?formId=3")
+                                form(method="POST" action="http://mautic.dicasdeprogramacao.com.br/form/submit?formId=3" autocomplete="false" role="form" id="mauticform_01lssignin" data-mautic-form="01lssignin" enctype="multipart/form-data")
                                     .form-group
                                         label.small.text-gray-600(for='leadCapEmail') E-mail
-                                        input#leadCapEmail.form-control.rounded-pill(type='email' name='mauticform[email]' required)
+                                        input#leadCapEmail.form-control.rounded-pill(type='email' name='mauticform[email]' placeholder="Digite seu melhor e-mail aqui." required)
                                     .form-group
-                                        input(type="hidden" id="g-recaptcha-response" name="g-recaptcha-response")
-                                        input(type="hidden" name="action" value="validate_captcha")
-
                                         input(type="hidden" name="mauticform[formId]" id="mauticform_01lssignin_id" value="3")
                                         input(type="hidden" name="mauticform[return]" id="mauticform_01lssignin_return" value="")
                                         input(type="hidden" name="mauticform[formName]" id="mauticform_01lssignin_name" value="01lssignin")
 
 
-                                    button.btn.btn-primary.btn-marketing.btn-block.rounded-pill.mt-4(type='submit') Assistir Gratuitamente
+                                    button.btn.btn-primary.btn-marketing.btn-block.rounded-pill.mt-4(type='submit' name="mauticform[submit]") Assistir Gratuitamente
 
 
 
