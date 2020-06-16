@@ -1,0 +1,126 @@
+extends ../layouts/default.pug
+
+block config
+
+    - var pageTitle = 'Masterclass Rota do Programador'
+
+append css
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.css')
+    link(rel='stylesheet', href='https://unpkg.com/aos@next/dist/aos.css')
+
+block content
+
+
+
+    include mixins/header.pug
+    +header({
+        pageHeaderBg: 'bg-gradient-primary-to-secondary',
+        pageHeaderStyle: 'page-header-dark',
+        svgBorderAngled: true,
+        svgBorderRounded: false,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-light'
+    })
+
+        .page-header-content(id="signup-form")
+            .container
+                .row.align-items-center
+                    .col-lg-6
+                        .badge.badge-marketing.badge-pill.badge-secondary-soft.text-secondary.mb-3 de 29/06/2020 a 06/07/2020
+                        h1.page-header-title Masterclass Rota do Programador
+                        p.page-header-text Inscreva-se GRATUITAMENTE para a Masterclass que vai revelar o caminho para você se tornar um programador profissional em menos de 6 meses.
+                        p.page-header-text A Masterclass vai acontecer entre os dias 29/06/2020 e 06/07/2020. Para participar basta se inscrever.
+                    .col-lg-6
+                        .card.rounded-lg.text-dark
+                            .card-header.py-4
+                                | Inscreva-se GRATUITAMENTE na Masterclass!
+                            .card-body
+                                form(method="POST" action="https://mautic.dicasdeprogramacao.com.br/form/submit?formId=3" autocomplete="false" role="form" id="mauticform_01lssignin" data-mautic-form="01lssignin" enctype="multipart/form-data")
+                                    .form-group
+                                        label.small.text-gray-600(for='leadCapEmail') E-mail
+                                        input#leadCapEmail.form-control.rounded-pill(type='email' name='mauticform[email]' placeholder="Digite seu melhor e-mail aqui." required)
+                                    .form-group
+                                        input(type="hidden" name="mauticform[formId]" id="mauticform_01lssignin_id" value="3")
+                                        input(type="hidden" name="mauticform[return]" id="mauticform_01lssignin_return" value="")
+                                        input(type="hidden" name="mauticform[formName]" id="mauticform_01lssignin_name" value="01lssignin")
+
+
+                                    button.btn.btn-primary.btn-marketing.btn-block.rounded-pill.mt-4(type='submit' name="mauticform[submit]") Assistir Gratuitamente
+
+
+
+
+
+
+
+
+    include mixins/header.pug
+    +header({
+        pageHeaderBg: 'bg-light',
+        pageHeaderStyle: 'page-header-light',
+        svgBorderAngled: false,
+        svgBorderRounded: false,
+        svgBorderWaves: true,
+        svgBorderFill: 'text-dark'
+    })
+
+        .page-header-content
+            .container
+                .row.justify-content-center
+                    .col-xl-8.col-lg-10.text-center(data-aos='slide-left')
+                        h1.page-header-title Conheça o instrutor!
+                        img.avatar-lp(src='/assets/img/foto-gustavo.jpg')
+                        p.page-header-text.mb-5 <strong>Gustavo Furtado</strong> é Mestre em Computação Aplicada, Engenheiro da Computação, criador do blog { Dicas de Programação } por onde já passaram mais de 3 milhões de pessoas, em sua maioria iniciantes em programação.
+                        p.page-header-text.mb-5 Tem mais de 15 anos de experiência como desenvolvedor de softwares, tendo trabalhado com diversas linguagens de programação, frameworks, tecnicas e metodologias.
+                        
+
+
+
+
+
+block footer
+
+    include mixins/footer.pug
+    +footer({
+        footerBg: 'bg-dark',
+        footerStyle: 'footer-dark'
+    })
+
+append scripts
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.js')
+    script(src='https://unpkg.com/aos@next/dist/aos.js')
+    script.
+        AOS.init({
+            disable: 'mobile',
+            duration: 600,
+            once: true
+        });
+    //Facebook Pixel Code
+    script.
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '553205085377073');
+        fbq('track', 'PageView');
+    noscript
+        img(height="1", width="1", style="display:none", src="https://www.facebook.com/tr?id=553205085377073&ev=PageView&noscript=1")
+    //Mautic
+    script.
+        (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+            w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+            m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//mautic.dicasdeprogramacao.com.br/mtc.js','mt');
+        mt('send', 'pageview');
+    //Global site tag (gtag.js) - Google Ads: 993243463
+    script(async, src="https://www.googletagmanager.com/gtag/js?id=AW-993243463")
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-993243463');
+    

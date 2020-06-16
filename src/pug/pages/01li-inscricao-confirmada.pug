@@ -1,0 +1,88 @@
+extends ../layouts/default.pug
+
+block config
+
+    - var pageTitle = 'Masterclass Rota do Programador'
+
+append css
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.css')
+    link(rel='stylesheet', href='https://unpkg.com/aos@next/dist/aos.css')
+
+    style.
+        #layoutDefault {
+            background: #1f2d41 !important;
+        }
+
+block content
+
+    //- * * * * * * * * * *
+    //- * * Page Header * *
+    //- * * * * * * * * * *
+
+    include mixins/header.pug
+    +header({
+        pageHeaderBg: 'bg-gradient-primary-to-secondary',
+        pageHeaderStyle: 'page-header-dark',
+        svgBorderAngled: false,
+        svgBorderRounded: false,
+        svgBorderWaves: true,
+        svgBorderFill: 'text-dark'
+    })
+
+        .page-header-content.mb-n5
+            .container
+                .row.justify-content-center
+                    .col-xl-8.col-lg-10.text-center(data-aos='fade')
+                        h1.page-header-title Que bom ter você conosco!
+                        p.page-header-text.mb-5 Agora que a sua inscrição para a <strong>Masterclass Rota do Programador</strong> foi confirmada, fique atento à sua caixa de entrada que você receberá o link da primeira aula no dia <strong>29/06/2020</strong>.
+                        p.page-header-text.mb-5 <strong>Importante! Prepare-se para assistir às aulas na semana da Masterclass, pois as aulas sairão do ar no fim do evento.</strong>
+                        
+                
+
+
+block footer
+
+    include mixins/footer.pug
+    +footer({
+        footerBg: 'bg-dark',
+        footerStyle: 'footer-dark'
+    })
+
+append scripts
+    script(src='https://unpkg.com/aos@next/dist/aos.js')
+    script.
+        AOS.init({
+            disable: 'mobile',
+            duration: 600,
+            once: true
+        });
+    //Facebook Pixel Code
+    script.
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '553205085377073');
+        fbq('track', 'PageView');
+    noscript
+        img(height="1", width="1", style="display:none", src="https://www.facebook.com/tr?id=553205085377073&ev=PageView&noscript=1")
+    //Mautic
+    script.
+        (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+            w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+            m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//mautic.dicasdeprogramacao.com.br/mtc.js','mt');
+        mt('send', 'pageview');
+    //Global site tag (gtag.js) - Google Ads: 993243463
+    script(async, src="https://www.googletagmanager.com/gtag/js?id=AW-993243463")
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-993243463');
+        gtag('event', 'conversion', {'send_to': 'AW-993243463/gomoCKeam88BEMfiztkD'});
+
