@@ -1,0 +1,142 @@
+extends ../layouts/default.pug
+
+block config
+
+    - var pageTitle = 'Masterclass Rota do Programador - O método!'
+
+append css
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.css')
+    link(rel='stylesheet', href='https://unpkg.com/aos@next/dist/aos.css')
+    style.
+        .page-header-dark {
+            padding-top: 4rem;
+        }
+        .video {
+            padding-top: 2rem;
+        }
+        .menu {
+            margin-top: 1.5rem;
+        }
+        .item-menu {
+            margin-top: 2rem;
+        }
+        .item-menu-text {
+            padding-left: 3rem;
+            padding-top: 0.5rem;
+        }
+        .card-text {
+            color: #242a85;
+        }
+    meta(property="og:image" content="assets/img/video-2.png")
+
+block content
+
+
+
+    include mixins/header.pug
+    +header({
+        pageHeaderBg: 'bg-gradient-primary-to-secondary',
+        pageHeaderStyle: 'page-header-dark',
+        svgBorderAngled: false,
+        svgBorderRounded: true,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-dark'
+    })
+        
+        .page-header-content
+            .container.text-center
+                .row.justify-content-center
+                    h1.page-header-title.mb-3 Masterclass Rota do Programador - Vídeo 2
+
+        .container
+            .row
+                .col-lg-8.col-xl-9.video
+                    iframe(width="100%" height="450" src="https://www.youtube.com/embed/vQGZRdwhWLA?autoplay=1&amp;controls=0&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;modestbranding=1&amp;nologo=1&amp;theme=light&amp;wmode=opaque&amp;iv_load_policy=3&amp;fs=0" frameborder="0" allowfullscreen="")
+
+                .col-lg-4.col-xl-3.mb-5.menu
+                    a.item-menu.card(href='video-1.html')
+                        .card-body.p-4
+                            .row
+                                .col-3
+                                    .icon-stack.icon-stack-lg.bg-success.text-primary
+                                        i(data-feather='check')
+                                .col-9.item-menu-text
+                                    h6 Vídeo 1
+                                    p.card-text Liberado!
+                    span.item-menu.card
+                        .card-body.p-4
+                            .row
+                                .col-3
+                                    .icon-stack.icon-stack-lg.bg-secondary.text-primary
+                                        i(data-feather='check')
+                                .col-9.item-menu-text
+                                    h6 Vídeo 2
+                                    p.card-text Assistindo
+                    span.item-menu.bg-light.card
+                        .card-body.p-4
+                            .row
+                                .col-3
+                                    .icon-stack.icon-stack-lg.bg-primary-soft.text-primary
+                                        i(data-feather='clock')
+                                .col-9.item-menu-text
+                                    h6 Vídeo 3
+                                    p.card-text 03/07
+            .row.menu
+                a.btn.btn-xl.btn-primary.btn-block.rounded-pill.mt-5(href='https://www.facebook.com/groups/267922657630154') Entrar na comunidade exclusiva do Facebook
+                a.btn.btn-xl.btn-secondary.btn-block.rounded-pill.mt-5(href='Visualg_30.zip' target="_blank") Download do Visualg 3.0
+
+
+
+block footer
+
+    include mixins/footer.pug
+    +footer({
+        footerBg: 'bg-dark',
+        footerStyle: 'footer-dark'
+    })
+
+append scripts
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.js')
+    script(src='https://unpkg.com/aos@next/dist/aos.js')
+    script.
+        AOS.init({
+            disable: 'mobile',
+            duration: 600,
+            once: true
+        });
+    //Facebook Pixel Code
+    script.
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '553205085377073');
+        fbq('track', 'PageView');
+    noscript
+        img(height="1", width="1", style="display:none", src="https://www.facebook.com/tr?id=553205085377073&ev=PageView&noscript=1")
+    //Mautic
+    script.
+        (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+            w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+            m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//mautic.dicasdeprogramacao.com.br/mtc.js','mt');
+        mt('send', 'pageview');
+    //Global site tag (gtag.js) - Google Ads: 993243463
+    script(async, src="https://www.googletagmanager.com/gtag/js?id=AW-993243463")
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-993243463');
+    //Google Analytics
+    script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-39997045-1")
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-39997045-1');
+
