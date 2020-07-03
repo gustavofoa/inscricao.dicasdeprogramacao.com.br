@@ -2,7 +2,7 @@ extends ../layouts/default.pug
 
 block config
 
-    - var pageTitle = 'Masterclass Rota do Programador - O método!'
+    - var pageTitle = 'Masterclass Rota do Programador - A Rota!'
 
 append css
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.css')
@@ -27,7 +27,7 @@ append css
         .card-text {
             color: #242a85;
         }
-    meta(property="og:image" content="assets/img/video-1.png")
+    meta(property="og:image" content="https://dicasdeprogramacao.com.br/masterclass-rota-do-programador/assets/img/video-3.png")
 
 block content
 
@@ -46,25 +46,25 @@ block content
         .page-header-content
             .container.text-center
                 .row.justify-content-center
-                    h1.page-header-title.mb-3 Masterclass Rota do Programador - Vídeo 1
+                    h1.page-header-title.mb-3 Masterclass Rota do Programador - Vídeo 3
 
         .container
             .row
                 .col-lg-8.col-xl-9.video
-                    iframe(width="100%" height="450" src="https://www.youtube.com/embed/U9NB_OJBqz0?autoplay=1&amp;controls=0&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;modestbranding=1&amp;nologo=1&amp;theme=light&amp;wmode=opaque&amp;iv_load_policy=3&amp;fs=0" frameborder="0" allowfullscreen="")
+                    iframe(width="100%" height="450" src="https://www.youtube.com/embed/BrON6Ez1uJQ?autoplay=1&amp;controls=0&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;modestbranding=1&amp;nologo=1&amp;theme=light&amp;wmode=opaque&amp;iv_load_policy=3&amp;fs=0" frameborder="0" allowfullscreen="")
 
                 .col-lg-4.col-xl-3.mb-5.menu
-                    span.item-menu.card
+                    a.item-menu.card(href='video-1.html')
                         .card-body.p-4
                             .row
                                 .col-3
-                                    .icon-stack.icon-stack-lg.bg-secondary.text-primary
+                                    .icon-stack.icon-stack-lg.bg-success.text-primary
                                         i(data-feather='check')
                                 .col-9.item-menu-text
                                     h6 Vídeo 1
-                                    p.card-text Assistindo
+                                    p.card-text Liberado!
                     a.item-menu.card(href='video-2.html')
-                        .card-body.p-4b
+                        .card-body.p-4
                             .row
                                 .col-3
                                     .icon-stack.icon-stack-lg.bg-success.text-primary
@@ -72,17 +72,18 @@ block content
                                 .col-9.item-menu-text
                                     h6 Vídeo 2
                                     p.card-text Liberado!
-                    a.item-menu.card(href='video-3.html')
+                    span.item-menu.card
                         .card-body.p-4
                             .row
                                 .col-3
-                                    .icon-stack.icon-stack-lg.bg-success.text-primary
+                                    .icon-stack.icon-stack-lg.bg-secondary.text-primary
                                         i(data-feather='check')
                                 .col-9.item-menu-text
                                     h6 Vídeo 3
-                                    p.card-text Liberado!
+                                    p.card-text Assistindo
             .row.menu
                 a.btn.btn-xl.btn-primary.btn-block.rounded-pill.mt-5(href='https://www.facebook.com/groups/267922657630154') Entrar na comunidade exclusiva do Facebook
+                a.btn.btn-xl.btn-secondary.btn-block.rounded-pill.mt-5(href='rota-do-programador.png' target="_blank") Download da Rota
 
 
 
