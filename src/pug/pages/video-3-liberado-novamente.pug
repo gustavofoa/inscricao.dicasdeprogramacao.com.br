@@ -2,7 +2,7 @@ extends ../layouts/default.pug
 
 block config
 
-    - var pageTitle = 'Masterclass Rota do Programador - Os primeiros passos!'
+    - var pageTitle = 'Masterclass Rota do Programador - A Rota!'
 
 append css
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.css')
@@ -27,7 +27,19 @@ append css
         .card-text {
             color: #242a85;
         }
-    meta(property="og:image" content="https://dicasdeprogramacao.com.br/masterclass-rota-do-programador/assets/img/video-2.png")
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe, .video-container object, .video-container embed {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    meta(property="og:image" content="https://dicasdeprogramacao.com.br/masterclass-rota-do-programador/assets/img/video-3.png")
 
 block content
 
@@ -46,15 +58,16 @@ block content
         .page-header-content
             .container.text-center
                 .row.justify-content-center
-                    h1.page-header-title.mb-3 Masterclass Rota do Programador - Vídeo 2
+                    h1.page-header-title.mb-3 Masterclass Rota do Programador - Vídeo 3
 
         .container
             .row
                 .col-lg-8.col-xl-9.video
-                    iframe(width="100%" height="450" src="https://www.youtube.com/embed/KQEceEm_x_c?autoplay=1&amp;controls=0&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;modestbranding=1&amp;nologo=1&amp;theme=light&amp;wmode=opaque&amp;iv_load_policy=3&amp;fs=0" frameborder="0" allowfullscreen="")
+                    .video-container
+                        iframe(width="100%" height="450" src="https://www.youtube.com/embed/BrON6Ez1uJQ?autoplay=1&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;modestbranding=1&amp;nologo=1&amp;theme=light&amp;wmode=opaque&amp;iv_load_policy=3" frameborder="0" allowfullscreen="")
 
                 .col-lg-4.col-xl-3.mb-5.menu
-                    a.item-menu.card(href='video-1.html')
+                    a.item-menu.card(href='video-1-liberado-novamente.html')
                         .card-body.p-4
                             .row
                                 .col-3
@@ -63,6 +76,15 @@ block content
                                 .col-9.item-menu-text
                                     h6 Vídeo 1
                                     p.card-text Liberado!
+                    a.item-menu.card(href='video-2-liberado-novamente.html')
+                        .card-body.p-4
+                            .row
+                                .col-3
+                                    .icon-stack.icon-stack-lg.bg-success.text-primary
+                                        i(data-feather='check')
+                                .col-9.item-menu-text
+                                    h6 Vídeo 2
+                                    p.card-text Liberado!
                     span.item-menu.card
                         .card-body.p-4
                             .row
@@ -70,20 +92,12 @@ block content
                                     .icon-stack.icon-stack-lg.bg-secondary.text-primary
                                         i(data-feather='check')
                                 .col-9.item-menu-text
-                                    h6 Vídeo 2
-                                    p.card-text Assistindo
-                    a.item-menu.card(href='video-3.html')
-                        .card-body.p-4
-                            .row
-                                .col-3
-                                    .icon-stack.icon-stack-lg.bg-success.text-primary
-                                        i(data-feather='check')
-                                .col-9.item-menu-text
                                     h6 Vídeo 3
-                                    p.card-text Liberado!
+                                    p.card-text Assistindo
             .row.menu
-                a.btn.btn-xl.btn-primary.btn-block.rounded-pill.mt-5(href='https://www.facebook.com/groups/267922657630154') Entrar na comunidade exclusiva do Facebook
-                a.btn.btn-xl.btn-secondary.btn-block.rounded-pill.mt-5(href='Visualg_30.zip' target="_blank") Download do Visualg 3.0
+                //- a.btn.btn-xl.btn-primary.btn-block.rounded-pill.mt-5(href='https://www.facebook.com/groups/267922657630154') Entrar na comunidade exclusiva do Facebook
+                //- a.btn.btn-xl.btn-secondary.btn-block.rounded-pill.mt-5(href='rota-do-programador.png' target="_blank") Download da Rota
+                a.btn.btn-xl.btn-secondary.btn-block.rounded-pill.mt-5(href='https://academiadoprogramador.com.br/') Inscrições ABERTAS para a { Academia do Programador }
 
 
 
