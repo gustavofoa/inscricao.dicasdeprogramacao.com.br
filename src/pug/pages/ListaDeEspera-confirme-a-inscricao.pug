@@ -1,0 +1,94 @@
+extends ../layouts/default.pug
+
+block config
+
+    - var pageTitle = 'Lista de Espera - Academia do Programador'
+
+append css
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.css')
+    link(rel='stylesheet', href='https://unpkg.com/aos@next/dist/aos.css')
+
+    style.
+        #layoutDefault {
+            background: #1f2d41 !important;
+        }
+
+block content
+
+    //- * * * * * * * * * *
+    //- * * Page Header * *
+    //- * * * * * * * * * *
+
+    include mixins/header.pug
+    +header({
+        pageHeaderBg: 'bg-gradient-primary-to-secondary',
+        pageHeaderStyle: 'page-header-dark',
+        svgBorderAngled: false,
+        svgBorderRounded: false,
+        svgBorderWaves: true,
+        svgBorderFill: 'text-dark'
+    })
+
+        .page-header-content.mb-n5
+            .container
+                .row.justify-content-center
+                    .col-xl-8.col-lg-10.text-center(data-aos='fade')
+                        h1.page-header-title Quase lá!
+                        p.page-header-text.mb-5 Agoranós precisamos confirmar que este e-mail é seu mesmo.
+                        p.page-header-text.mb-5 Você receberá um e-mail nos próximos instantes, com um link pra você confirmar a sua inscrição. Basta abrí-lo e clicar no link.
+                        p.page-header-text.mb-5 Talvez os links abaixo possam te ajudar.
+                        .row-lg.text-center(data-aos='fade-up', data-aos-delay='500')
+                            a.btn.btn-white.btn-xl.text-primary.rounded-pill(href='https://gmail.com') Acessar Gmail
+                            a.btn.btn-white.btn-xl.text-primary.rounded-pill(href='https://login.live.com') Acessar Hotmail
+                            a.btn.btn-white.btn-xl.text-primary.rounded-pill(href='https://login.yahoo.com') Acessar Yahoo
+                            p.page-header-text(style="padding-top:20px;") * O e-mail de confirmação pode demorar alguns minutos para chegar à sua caixa de entrada. Caso demore muito, verifique se o e-mail caiu na sua caixa de Spams.
+                        
+                        
+                
+
+
+block footer
+
+    include mixins/footer.pug
+    +footer({
+        footerBg: 'bg-dark',
+        footerStyle: 'footer-dark'
+    })
+
+append scripts
+    script(src='https://unpkg.com/aos@next/dist/aos.js')
+    script.
+        AOS.init({
+            disable: 'mobile',
+            duration: 600,
+            once: true
+        });
+    //Facebook Pixel Code
+    script.
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '553205085377073');
+        fbq('track', 'PageView');
+    noscript
+        img(height="1", width="1", style="display:none", src="https://www.facebook.com/tr?id=553205085377073&ev=PageView&noscript=1")
+    //Mautic
+    script.
+        (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+            w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+            m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//mautic.dicasdeprogramacao.com.br/mtc.js','mt');
+        mt('send', 'pageview');
+    //Global site tag (gtag.js) - Google Ads: 993243463
+    script(async, src="https://www.googletagmanager.com/gtag/js?id=AW-993243463")
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-993243463');
+    
